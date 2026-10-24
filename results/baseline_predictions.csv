@@ -1,0 +1,530 @@
+mode,example_id,group_id,origin,question,reference,prediction,rougeL,latency_s,words
+base,ex0005,tpms,nhtsa_tirewise,The tire-pressure warning light came on. Can I ignore it if the car still drives normally?,"No. Pull over somewhere safe and check the tires as soon as practical. The warning can indicate significant underinflation, which can affect safety. If a tire looks damaged or very low, avoid driving on it and seek assistance.","Yes, you can ignore it if the car is still driving normally and there are no other issues reported. However, it's important to check the tire pressure regularly as low tire pressure can affect fuel efficiency, handling, and safety. If the tire pressure continues to be low or fluctuates significantly, it may indicate a problem with the tire inflation system or a leak in one of the tires. In such cases, it would be best to have the vehicle inspected by a professional mechanic to ensure all systems are functioning properly.",0.19999999999999998,8.174079656600952,91
+base,ex0006,tpms,nhtsa_tirewise,Does a tire-pressure monitoring system replace manual pressure checks?,"No. It is a useful warning system, but routine pressure checks are still needed because the system may warn only after pressure has dropped substantially.","A Tire-Pressure Monitoring System (TPMS) is designed to alert drivers when the air pressure in their tires falls below safe levels. It does not replace manual pressure checks but rather complements them.
+
+Here's how TPMS works and its relationship with manual checks:
+
+1. **Detection**: The TPMS uses sensors embedded in each wheel to detect changes in tire pressure. These sensors can be either mechanical or electronic.
+
+2. **Alerts**: When the sensor detects that the tire pressure has dropped below a predetermined threshold, it sends an alert to the vehicle's dashboard display or mobile app.
+
+3. **Manual Checks**: While TPMS provides real-time alerts, it cannot monitor the tire pressure continuously without human intervention. Manual checks are still necessary for:
+   - Ensuring proper inflation at regular intervals.
+   - Checking for any signs of damage or wear on the tires.
+   - Adjusting tire pressures as needed based on driving conditions and road surfaces.
+
+4. **Combined Use**: A combination of both",0.09836065573770493,16.084289073944092,157
+base,ex0013,rotation_interval,nhtsa_tirewise,How often should I rotate my tires?,"Follow the vehicle manufacturer’s maintenance schedule. NHTSA cites 5,000–8,000 miles as a general interval when rotation is recommended, but the correct interval varies by vehicle and tire configuration.","The frequency of tire rotation depends on several factors including the type and size of your vehicle, the condition of your tires, and how you drive. Generally, it's recommended to rotate your tires every 5,000 to 7,500 miles or every six months, whichever comes first.
+
+Here’s a general guideline:
+
+1. **Front-to-rear**: Rotate the front wheels with the rear wheels.
+2. **Quarter-to-quarter**: Rotate the left front wheel with the right rear wheel, and vice versa.
+3. **Alternate direction**: Alternate between rotating one set of tires in one direction and another set in the opposite direction.
+
+It's important to follow these guidelines for optimal performance and longevity of your tires. Regularly checking your tire pressure and maintaining proper alignment can also help prevent uneven wear and extend the life of your tires.",0.14035087719298245,12.287049531936646,130
+base,ex0018,vibration,nhtsa_tirewise,My steering wheel vibrates at speed. Could the tires be involved?,"Tire or wheel imbalance can cause vibration, but other problems can too. Have the vehicle inspected by a qualified tire or automotive professional, especially if the vibration is persistent or sudden.","Yes, it is possible that the vibration of your steering wheel could be caused by issues with your tires. Here are some potential reasons why this might be happening:
+
+1. **Tire Pressure**: Low tire pressure can cause vibrations in the steering wheel as the wheels try to maintain contact with the road surface.
+
+2. **Worn Tires**: Worn or improperly inflated tires can also lead to vibrations and may affect the vehicle's handling.
+
+3. **Misaligned Wheels**: If the wheels are not properly aligned (i.e., they are out of true), it can cause vibrations through the steering column.
+
+4. **Wheel Bearings**: Loose or worn wheel bearings can transmit vibrations from the wheels to the steering column.
+
+5. **Suspension Issues**: Problems with the suspension system, such as loose ball joints or broken tie rods, can also cause vibrations.
+
+6. **Brake System**: Sometimes brake problems, like squeaks or grinding noises, can be transmitted through the steering column.
+
+7. **",0.11764705882352941,9.02842926979065,155
+base,ex0025,rotation_interval,nhtsa_tirewise,"Is 5,000 miles always the correct tire rotation interval?","No. It is not a universal rule. Follow your vehicle manufacturer’s schedule; NHTSA gives 5,000–8,000 miles as general guidance for vehicles where rotation is recommended.","No, 5,000 miles is not necessarily the correct tire rotation interval for all vehicles or driving conditions. Tire rotation intervals can vary depending on several factors:
+
+1. **Vehicle Type**: Different types of vehicles have different needs and wear patterns.
+2. **Driving Conditions**: High-speed driving, heavy loads, and frequent stops can accelerate tire wear faster than normal.
+3. **Tire Quality**: Higher quality tires may last longer with less frequent rotations.
+4. **Manufacturer Recommendations**: Most manufacturers provide specific recommendations based on their testing data.
+
+For general guidelines:
+- **Regular Rotations (Every 6,000 to 8,000 miles)**: This is often recommended as it helps distribute wear evenly across the tires.
+- **Extended Rotations (Every 10,000 to 12,000 miles)**: Some drivers prefer this option if they want to extend the life of their tires without regular maintenance visits.
+
+Always refer to your",0.12941176470588234,12.080931186676025,137
+base,ex0039,vibration,nhtsa_tirewise,What should I do about repeated tire noise or vibration?,Do not ignore persistent noise or vibration. Have a tire professional inspect the tires and wheels to identify the cause.,"If you're experiencing repeated tire noise or vibration, there could be several reasons for it. Here are some steps you can take to diagnose and potentially fix the issue:
+
+1. **Check Tire Pressure**: Ensure that your tires are properly inflated. Underinflated or overinflated tires can cause uneven wear and lead to vibrations.
+
+2. **Inspect Tires for Damage**: Look for any signs of damage such as cuts, bulges, or cracks in the tread or sidewalls. These can cause abnormal noises when driving.
+
+3. **Look at the Wheel Alignment**: Misalignment can cause excessive tire wear and vibrations. Check if your wheels are straight and aligned correctly with the steering axis.
+
+4. **Examine the Suspension System**: A loose or worn-out suspension system can also contribute to tire noise and vibration. Check all components like springs, shock absorbers, and bushings.
+
+5. **Consider Replacing Worn Out Components**: If you find any worn out parts (like worn-out",0.11494252873563217,15.656677484512329,151
+base,ex0046,tpms,nhtsa_tirewise,The TPMS light went off after I drove for a while. Does that prove the tires are fine?,Not necessarily. Check all tire pressures with a gauge when safe and compare them with the vehicle’s specification. Investigate recurring warnings or suspected leaks.,"No, it does not necessarily mean that the tires are fine just because the TPMS (Tire Pressure Monitoring System) light has gone off. The TPMS is designed to alert you if there's a significant drop in tire pressure, which could indicate a problem with your tires.
+
+Here are some reasons why the TPMS light might have come on:
+
+1. **Normal Operation**: If you recently inflated your tires or changed them, the TPMS may be indicating normal operation.
+2. **Pressure Drop**: Even though the light is off now, it could still be showing an issue if the pressure dropped significantly since you last checked.
+3. **Sensor Failure**: There could be a sensor failure within the TPMS system itself, causing false readings.
+4. **Software Issue**: Sometimes, software updates can cause temporary issues with the TPMS.
+
+To ensure the safety and performance of your vehicle, it’s important to check the actual tire pressure using a reliable gauge. Here are steps you can follow:
+
+1",0.10638297872340426,15.678885698318481,161
+base,ex0077,jump_start,claude_authored,How do I jump-start a car safely?,"Check the owner’s manual first, since some cars specify jump-start points or restrict jump-starting. A typical sequence with both cars off: connect red to the dead battery’s positive terminal, the other red to the donor’s positive, black to the donor’s negative, and the last black clamp to unpainted metal on the dead car’s engine or body away from the battery. Start the donor, then the dead car, and remove the clamps in reverse order.","Jump-starting a car can be a useful skill to have in case of an emergency or when you need to move your vehicle quickly. Here's how to safely perform a jump-start:
+
+1. **Ensure Safety First**: Before attempting any electrical work on the car, make sure it is off and all power sources are disconnected.
+
+2. **Find a Suitable Partner**: Choose another car that has its battery connected to a charging station (like a public charger) or one with a fully charged battery. This will provide enough current for the jump start.
+
+3. **Connect the Positive Leads**: Connect the positive terminal of the dead car’s battery to the positive terminal of the working car’s battery using a jumper cable. Make sure the cables are securely attached.
+
+4. **Connect the Negative Leads**: Next, connect the negative terminal of the dead car’s battery to the engine block of the working car. Again, ensure the connections are secure.
+
+5. **Start the Working Car**: Start the working car.",0.24,8.019855976104736,163
+base,ex0078,jump_start,claude_authored,Why not connect the last clamp to the dead battery's negative terminal?,"Connecting it there can create a spark near the battery, which may give off flammable hydrogen gas. A bare metal ground point is safer.","Connecting the last clamp (or voltmeter) to the dead battery's negative terminal is generally not recommended for several reasons:
+
+1. **Safety**: The negative terminal of a battery typically has a higher voltage than the positive terminal due to its connection to the earth or ground. Connecting any device directly to this terminal can be dangerous and may cause severe damage to your equipment.
+
+2. **Electrical Hazards**: Direct contact with high-voltage terminals can lead to electric shock, burns, or other electrical injuries. This is especially true if you're working on live circuits without proper safety precautions.
+
+3. **Battery Damage**: If you attempt to measure the voltage of a dead battery, it could potentially discharge through the clamp into your body, causing harm. Additionally, measuring the voltage of a dead battery might not provide accurate readings because the battery may have lost some charge but still retains enough to conduct electricity.
+
+4. **Accuracy**: Measuring voltages from a dead battery is unreliable because the battery may not",0.08376963350785341,8.067998886108398,164
+base,ex0079,jump_start,claude_authored,What should I do after a jump start?,"Avoid switching the engine off straight away. Drive for about 20-30 minutes or longer so the alternator can recharge the battery, then have the battery and charging system tested soon. A battery that goes flat again may be failing, or the alternator may not be charging.","After performing a ""jump start"" on your computer (which typically involves connecting the power cord to the battery and pressing the power button), you will need to perform several steps to fully boot up your system:
+
+1. **Wait for the BIOS/UEFI Setup Menu**: The computer may display a message asking you to press a key or select an option to enter the BIOS/UEFI setup menu.
+
+2. **Enter the BIOS/UEFI Settings**:
+   - If prompted, press the appropriate key (usually F2, F10, Del, Esc) to access the BIOS/UEFI settings.
+   - Alternatively, if you have not been asked to press any keys, wait until the BIOS/UEFI screen appears and then proceed with the next step.
+
+3. **Set Boot Order**:
+   - In the BIOS/UEFI settings, navigate to the ""Boot"" or ""Boot Order"" section.
+   - Ensure that the USB drive or external hard drive containing the operating",0.11518324607329844,8.075893878936768,142
+base,ex0080,jump_start,claude_authored,Can jump-starting damage a modern car?,"Wrong polarity or voltage spikes can damage electronics. Check the owner's manual, since some cars specify dedicated jump-start points.","Jump-starting a modern car is generally safe and does not cause significant damage to the vehicle's electrical system or components. However, there are some precautions you should take:
+
+1. Ensure that both vehicles have compatible batteries: The battery of the car you're trying to jump-start must be able to supply enough current to start your car.
+
+2. Use a high-quality jumper cable: Using low-quality cables can reduce the effectiveness of the jump-start attempt.
+
+3. Check for any visible signs of damage: If either car has visible damage to its wiring harnesses or other components, it may be best to avoid attempting a jump-start.
+
+4. Be cautious with the starter motor: Jump-starting a car can put stress on the starter motor, which could potentially lead to overheating or failure if done incorrectly.
+
+5. Follow safety guidelines: Always wear gloves when handling the jump leads and ensure that you have a clear path to ground before starting the engine.
+
+In general, jumping a car is relatively safe as",0.07142857142857142,14.721851825714111,166
+base,ex0081,brake_pads,claude_authored,What are the signs of worn brake pads?,"Common signs include squealing from the wear indicator, grinding noises, longer stopping distances, vibration when braking or a brake warning light. Have the brakes inspected promptly if you notice any of these.","Worn brake pads can be identified through several signs:
+
+1. **Noise**: One of the most common signs is a high-pitched squealing or grinding noise when you apply the brakes. This sound indicates that the friction material on the brake pad has worn down to the point where it's no longer effective.
+
+2. **Vibration**: If your vehicle feels unbalanced while braking, especially if there’s an unusual vibration in the steering wheel or body, this could be due to worn brake pads. The vibrations might also make the car feel unstable during sudden stops.
+
+3. **Slight Dragging**: When you press hard on the brake pedal, you may notice that the brake pedal starts to drag slightly before releasing completely. This means that the brake pads have worn down enough that they're not providing full stopping power.
+
+4. **Increased Brake Wear**: Over time, as the brake pads wear down, the entire system becomes less efficient and requires more effort from the driver to stop effectively. This increased",0.13999999999999999,8.082032442092896,164
+base,ex0082,brake_pads,claude_authored,How long do brake pads usually last?,"It varies widely, often 30,000-70,000 km depending on driving style, traffic and pad type.","The lifespan of brake pads can vary depending on several factors such as the type of vehicle, driving conditions (such as frequent hard braking), and maintenance practices.
+
+In general, most modern disc brakes should last anywhere from 20,000 to 50,000 miles before needing replacement. However, this is just an estimate and actual mileage may differ based on individual usage patterns.
+
+It's important to check your car's owner manual for specific recommendations regarding brake pad life expectancy for your particular make and model. Regular inspection and timely replacement of worn-out brake pads can help ensure safe and reliable performance of your vehicle.",0.0975609756097561,5.17389178276062,101
+base,ex0083,brake_pads,claude_authored,Can I replace the pads on just one wheel?,No. Pads should be replaced in pairs on the same axle so braking stays even.,"Yes, you can replace the pads on just one wheel if that is what you need to do. However, it's important to ensure that both wheels have the same type and size of brake pads for safety reasons. If you're unsure about the correct replacement or want professional advice, consulting with a mechanic would be advisable. They can help you determine whether replacing only one pad will suffice based on your vehicle's specifications and driving conditions.",0.10638297872340426,3.5887837409973145,76
+base,ex0084,brake_pads,claude_authored,What happens if I ignore grinding brakes?,"The pads wear down to metal and damage the discs, which costs more to fix and reduces braking safety.","If you ignore the warning signs of your car's braking system and continue to use it without proper maintenance or repairs, several potential issues can arise:
+
+1. **Increased Wear**: The brake pads will wear down faster than normal due to excessive friction from the rotors.
+
+2. **Reduced Performance**: Your vehicle may not stop as quickly or with the same level of control as when the brakes are functioning properly.
+
+3. **Safety Risks**: Ignoring these warnings could lead to accidents, especially in situations where quick stopping is crucial (e.g., during heavy traffic, on icy roads).
+
+4. **Expensive Repairs**: If ignored for too long, the issue might escalate into more significant problems that require costly repairs.
+
+5. **Regulatory Issues**: In some jurisdictions, ignoring safety warnings can result in fines or other legal consequences.
+
+6. **Environmental Impact**: Worn-out brakes can contribute to increased fuel consumption and higher emissions, which negatively impact the environment.
+
+It's important to address any",0.10112359550561797,8.09666395187378,155
+base,ex0085,brake_fluid,claude_authored,Why does brake fluid need to be changed?,"Brake fluid absorbs moisture over time. That lowers its boiling point and can corrode parts, leading to a spongy pedal or reduced braking.","Brake fluid is an essential component in the braking system of vehicles and other machinery that uses hydraulic brakes. It serves as a medium for transmitting pressure from the master cylinder to the calipers or wheel cylinders, which then press against the brake pads or shoes to bring the vehicle to a stop.
+
+Over time, brake fluid can degrade due to exposure to heat, moisture, and chemical reactions with water and air. This degradation can lead to several issues:
+
+1. Reduced effectiveness: The fluid may become less effective at transferring pressure, leading to reduced stopping power.
+2. Increased risk of failure: As the fluid degrades, it becomes more prone to leaks and failures, such as foaming or seizing the brake lines.
+3. Corrosion: Brake fluid can corrode metal components over time, potentially causing damage to the entire braking system.
+4. Contamination: Degraded fluid can introduce contaminants into the system, reducing its overall performance and lifespan.
+
+To ensure optimal performance and safety, it's important",0.10695187165775401,8.012866497039795,163
+base,ex0086,brake_fluid,claude_authored,How often should brake fluid be replaced?,"Follow the vehicle manufacturer’s schedule. It is often about every 2 years or a set distance, but intervals vary by vehicle and fluid type.","The frequency of replacing brake fluid can vary depending on several factors such as the type of vehicle, driving conditions, and maintenance practices. However, in general, it is recommended to replace brake fluid every 24,000 to 36,000 miles or every two years, whichever comes first.
+
+It's important to follow the manufacturer's recommendations for your specific vehicle model. If you notice any signs of contamination or deterioration in the brake fluid, such as white foaming or dark brown coloration, it may indicate that it needs to be changed sooner rather than later.
+
+Regularly checking and maintaining your brakes will help ensure their longevity and safety.",0.12030075187969924,5.346088886260986,104
+base,ex0087,brake_fluid,claude_authored,What causes a spongy brake pedal?,"Air in the brake lines, old or low fluid, a leak, or worn components. Have it inspected promptly.","A spongy brake pedal can be caused by several factors:
+
+1. Brake fluid level is too low: If the brake fluid level in your car's hydraulic system is too low, it can cause the brakes to feel spongy or mushy.
+
+2. Brake pads are worn out: Worn-out brake pads will not provide enough friction between the brake calipers and rotors, causing the brakes to feel spongy.
+
+3. Brake lines are clogged: Clogged brake lines can restrict the flow of brake fluid, making the brakes feel spongy.
+
+4. Brake booster malfunction: A faulty brake booster can also cause the brakes to feel spongy.
+
+5. Air in the brake lines: Air trapped in the brake lines can cause the brakes to feel spongy.
+
+6. Age-related wear: Over time, the components of the braking system may wear down, leading to a spongy feeling when you press on the brake pedal.
+
+If your brake pedal feels s",0.08045977011494253,8.111402034759521,153
+base,ex0088,brake_fluid,claude_authored,What is the difference between DOT 3 and DOT 4 brake fluid?,"They have different boiling points. Use the type on the reservoir cap or in the manual, and never mix glycol-based fluids with DOT 5 silicone fluid.","DOT 3 and DOT 4 are two different types of automotive brake fluids used in vehicles to provide effective braking performance.
+
+1. **DOT 3 Brake Fluid**: This type of brake fluid was introduced in 1978 and has been widely used since then due to its excellent properties. It is known for its high boiling point (around 205°C) which helps it resist vapor lock during heavy braking. DOT 3 also has good water resistance and low freezing point (-26°C), making it suitable for cold climates. However, it can be more expensive than other DOT grades because of its higher viscosity at lower temperatures.
+
+2. **DOT 4 Brake Fluid**: Introduced in 1984, this fluid offers better protection against corrosion compared to DOT 3. It has a slightly higher boiling point (around 210°C) and provides better lubrication, reducing wear on the brake system components. DOT 4 is less susceptible to foaming under extreme heat",0.07734806629834254,12.250258207321167,151
+base,ex0137,fuel_system,claude_authored,What does the fuel filter do?,It traps dirt and rust particles before they reach the injectors.,"The fuel filter is an important component in any internal combustion engine that helps to prevent debris and impurities from entering the fuel system. Here's what it typically does:
+
+1. Filtration: The primary function of the fuel filter is to remove solid particles and other contaminants from the fuel before it reaches the engine.
+
+2. Protection: By filtering out these impurities, the fuel filter protects the rest of the fuel system from damage caused by foreign objects.
+
+3. Efficiency: A clean fuel filter ensures that the fuel flows smoothly through the system, reducing resistance and improving overall engine performance.
+
+4. Longevity: Regularly replacing or cleaning the fuel filter can help extend the life of your vehicle's fuel system components.
+
+5. Safety: Proper filtration prevents potential blockages that could lead to reduced fuel flow or even complete shutdowns if left unaddressed.
+
+6. Compatibility: Different types of fuel filters may be required for different fuels (e.g., gasoline vs. diesel), so choosing the right one",0.056818181818181816,7.939670085906982,162
+base,ex0138,fuel_system,claude_authored,What are signs of a clogged fuel filter?,"Hesitation under load, hard starting, stalling or loss of power.","A clogged fuel filter can be identified by several signs:
+
+1. Poor Engine Performance: If your engine is running poorly or not performing as expected, it could be due to a clogged fuel filter.
+
+2. Rough Idle: A rough idle in the engine may indicate that there's an issue with the fuel system, including a clogged fuel filter.
+
+3. Excessive Fuel Consumption: If you notice that your car consumes more fuel than usual, this could be a sign of a clogged fuel filter.
+
+4. Check Engine Light: The check engine light on your dashboard might come on if there's an issue with your fuel system, which could include a clogged fuel filter.
+
+5. Reduced Power Output: If your vehicle feels weak or lacks power when accelerating, it could be because the fuel filter is clogged and restricting the flow of fuel into the engine.
+
+6. Increased Emissions: Clogged fuel filters can cause increased emissions from your vehicle, leading to higher levels of pollutants being released",0.03389830508474576,8.010035514831543,165
+base,ex0139,fuel_system,claude_authored,What are signs of bad fuel?,"Knocking, rough running soon after refuelling and poor mileage.","Bad fuel can be identified through several signs:
+
+1. Poor Engine Performance: If your engine is running poorly or making unusual noises, it could be due to poor-quality fuel.
+
+2. Excessive Fuel Consumption: If you notice that your car consumes more fuel than usual, especially if the consumption increases over time, this could indicate problems with the fuel system.
+
+3. Stuck Spark Plugs: If spark plugs in your engine become stuck and cannot ignite properly, it may be because the fuel is not burning correctly.
+
+4. Increased Emissions: Bad fuel can lead to increased emissions from your vehicle's exhaust system.
+
+5. Reduced Power Output: Your car might have reduced power output when accelerating or driving on the highway.
+
+6. Misfiring: If your engine misfires frequently, it could be caused by bad fuel quality.
+
+7. Rough Idle: A rough idle can also be an indicator of bad fuel.
+
+8. Clogged Fuel Filter: If the fuel filter becomes clogged, it can",0.023529411764705882,8.111801147460938,159
+base,ex0140,fuel_system,claude_authored,Is it bad to run the tank very low?,"It is best avoided. Sediment collects at the bottom of the tank, and the fuel pump uses fuel to help keep itself cool.","Running a fuel tank very low can be dangerous and potentially harmful for several reasons:
+
+1. **Safety Concerns**: Running out of fuel in an engine can cause the vehicle to stall or lose power suddenly, which is extremely dangerous.
+
+2. **Environmental Impact**: Fuel tanks that are empty contribute to air pollution when they're not refueled. This is because burning unrefined gasoline produces pollutants like carbon monoxide and other toxic substances.
+
+3. **Economic Considerations**: Not having enough fuel available means you might have to drive further than necessary to reach your destination, increasing travel time and expenses.
+
+4. **Maintenance Issues**: If the tank runs dry too often, it may lead to issues with the fuel system itself, such as clogged filters or damaged components due to prolonged exposure to hot exhaust gases.
+
+5. **Regulatory Compliance**: In many places, there are regulations about how much fuel must be kept in a vehicle's tank at all times. Failing to meet these requirements could",0.08648648648648649,8.027798414230347,160
+base,ex0161,diesel,claude_authored,What is a glow plug?,A heater in a diesel engine's combustion chamber that helps it start when cold.,"A glow plug is an ignition system component used in diesel engines to help start the engine when it's cold and difficult to start. It works by heating up the fuel-air mixture inside the cylinder before ignition occurs, which helps to ensure that the engine starts smoothly and efficiently.
+The glow plug consists of a metal casing with a ceramic or metallic tip at one end. When electricity flows through the wire connected to the plug, it heats up the tip, causing it to glow red-hot. This heat causes the fuel-air mixture to ignite more easily, allowing the engine to start.
+Glow plugs have been around for many years and are still commonly used in modern diesel engines. They can be installed as part of the original equipment on new vehicles or added later as an aftermarket upgrade.",0.1019108280254777,6.258260250091553,138
+base,ex0162,diesel,claude_authored,What is a diesel particulate filter (DPF)?,"A DPF traps soot from the exhaust of many modern diesel cars and clears it by burning it off in a process called regeneration. Frequent short trips can prevent complete regeneration and lead to clogging. If the DPF warning light appears, follow the owner’s manual, which may include a sustained drive at higher speed, and have it checked if the warning persists.","A Diesel Particulate Filter (DPF) is an air filtration device used in diesel engines to reduce the emission of harmful particles into the atmosphere. Here's a more detailed explanation:
+
+1. Purpose: The primary purpose of a DPF is to capture and trap soot particles produced during the combustion process in diesel engines.
+
+2. Operation:
+   - When exhaust gases from the engine pass through the DPF, the soot particles adhere to its inner walls.
+   - As the filter becomes clogged with soot, it gets hotter due to increased resistance to airflow.
+   - To clean the filter, a high-temperature gas stream is passed through the backside of the filter, which burns off the accumulated soot.
+
+3. Benefits:
+   - Reduces emissions of nitrogen oxides (NOx), hydrocarbons (HCs), and particulate matter (PM).
+   - Helps improve fuel efficiency and reduces noise pollution.
+   - Can be regenerated using different methods depending on the type",0.12560386473429952,8.044558048248291,148
+base,ex0163,diesel,claude_authored,What should I do if I put petrol in a diesel car?,"Do not start the engine. Petrol can damage the fuel pump and injectors, so have the tank drained by a workshop.","If you accidentally put petrol (gasoline) into a diesel vehicle, it can be dangerous and potentially catastrophic. Here's what you need to do:
+
+1. **Stop the Engine**: Immediately stop the engine of the diesel vehicle.
+
+2. **Ventilate the Area**: Open all windows and doors to allow fresh air to enter the vehicle.
+
+3. **Do Not Start the Engine Again**: Do not turn on the ignition or start the engine again until you have safely removed any fuel from the vehicle.
+
+4. **Remove Fuel**: Use a plastic bag or other suitable container to collect as much fuel as possible from the vehicle. Be careful not to spill any fuel onto the ground.
+
+5. **Clean Up**: Dispose of the collected fuel properly according to local regulations. It is important to handle this carefully to avoid further contamination.
+
+6. **Seek Professional Help**: If you're unsure about how to proceed or if the situation seems too complicated, contact professional help immediately. They will know how to safely remove",0.09625668449197862,8.13367772102356,164
+base,ex0164,diesel,claude_authored,Why drain the water separator in a diesel car?,"If your car has one, water in the fuel can damage the injection system, so drain it as the manual says.","Draining the water separator in a diesel car is typically done to remove any accumulated water that may have formed inside the system due to various factors such as condensation or moisture from the air entering the fuel tank.
+
+Here's why it might be necessary:
+
+1. **Condensation**: When diesel fuel is stored at high temperatures (around 80-95°C), it can absorb moisture from the surrounding environment. Over time, this moisture can accumulate and form condensate within the fuel lines and tanks.
+
+2. **Water Hammer**: Water hammer occurs when there is sudden pressure changes in the fuel system. This can cause damage to components if not properly addressed.
+
+3. **Fuel Quality**: Accumulated water can affect the quality of the fuel, potentially leading to issues with engine performance and efficiency.
+
+4. **Safety Concerns**: If water were to enter the combustion chamber during operation, it could lead to potential safety hazards, including reduced power output and increased risk of engine failure.
+
+### Steps to",0.09836065573770493,8.057947635650635,160
+base,ex0169,monsoon_care,claude_authored,Should I drive through a flooded road?,"Avoid driving through deep floodwater or water of unknown depth. If it would reach about the bottom of the doors, or you cannot judge the depth, turn back. Water entering the engine air intake can cause severe engine damage, and floodwater can hide hazards and affect brakes and electrics.","It is generally not recommended to drive through a flooded road, as it can be dangerous and potentially lead to accidents or loss of life. When driving in flood-prone areas, it's important to stay aware of the weather conditions and any warnings from local authorities. If you encounter flooding on the road ahead, try to find an alternative route if possible. If you must continue driving, proceed slowly and cautiously, keeping your distance from other vehicles and avoiding sharp turns or sudden stops. Always prioritize safety when driving in hazardous conditions.",0.15492957746478872,4.253028392791748,91
+base,ex0170,monsoon_care,claude_authored,What should I do if my car stalls in water?,"Do not try to restart the engine, because water in the engine can cause serious damage. If water is rising, leave the vehicle and prioritise your safety. When it is safe, move the car out of the water, for example by arranging recovery, and have it inspected by a professional.","If your car stalls in water, you can try the following steps to get it unstuck:
+
+1. **Stay Calm**: Panic can make matters worse. Stay calm and think clearly.
+
+2. **Check for Electrical Issues**: If there is no apparent damage or smell of fuel, check the battery connections. Sometimes, corrosion on the terminals can cause a stall. Use a wire brush to clean any rust or corrosion off the terminals.
+
+3. **Use a Battery Start Aid Kit**: These kits contain tools like jumper cables and a multimeter that can help diagnose electrical issues. They also have a starter motor that can be used to start the engine without damaging the battery.
+
+4. **Drain Water from the Engine**: If the water has flooded into the engine compartment, drain it out using a siphon or a bucket. Be careful not to flood the engine again with more water.
+
+5. **Start the Engine**: Once the water is drained, try starting the engine. If it still won",0.14084507042253522,8.126245975494385,163
+base,ex0171,monsoon_care,claude_authored,How do I dry the brakes after driving through water?,Drive slowly and press the brake pedal lightly a few times to dry the pads and discs.,"Drying your car's brakes after driving through water can be important to ensure they function properly when you need them most. Here’s how you can safely and effectively dry your brakes:
+
+1. **Check for Water Damage**: Before proceeding, inspect your brake system for any signs of water damage or corrosion. Look at the brake lines, hoses, calipers, rotors, and pads.
+
+2. **Use a Brake Cleaner**: Apply a high-quality brake cleaner directly onto the brake lines and around the wheels. This will help remove any remaining moisture from the surface of the brake components.
+
+3. **Dry with a Towel**: Use a clean towel to gently wipe down the brake lines and other exposed areas. Be careful not to apply too much pressure as this could cause more damage.
+
+4. **Allow Time to Dry**: Give the brake parts time to air-dry completely. Avoid using heat sources like hairdryers or direct sunlight, which can cause further damage.
+
+5. **Inspect Again**: After",0.10055865921787709,8.657023429870605,158
+base,ex0172,monsoon_care,claude_authored,How do I stop the windows fogging in the rain?,"Use the AC with the demist setting, clean the inside of the glass and make sure the wipers are in good condition.","Windows fogging is often caused by condensation or moisture buildup on the glass surface due to temperature differences between inside and outside of the vehicle. Here are some steps you can take to prevent or reduce window fogging:
+
+1. **Ventilate Properly**: Ensure that your car's ventilation system is functioning properly. This includes opening windows and using air conditioning if available.
+
+2. **Use Window Defoggers**: There are various products designed specifically for defogging windows. These can be sprayed directly onto the glass or used as wipes. Some common types include:
+   - **Window Defogger Sprays**: Apply these sprays to the inside of the windows before starting the engine.
+   - **Wipes with Anti-Fog Properties**: Use paper towels or microfiber cloths treated with anti-fog agents.
+
+3. **Prevent Condensation Buildup**:
+   - **Keep Windows Dry**: Avoid leaving wet items near the windows while driving.
+   - **Maintain Temperature Control**: Keep",0.08536585365853659,8.048975706100464,143
+base,ex0173,long_term_storage,claude_authored,How do I prepare a car for storage of a few months?,"Wash and dry the car, change the oil if it is due, fill the fuel tank, and use a fuel stabiliser for petrol if the manual or fuel supplier recommends it. Set tyre pressure as the manual advises (some makers suggest slightly higher), cover the car, and use a battery maintainer or disconnect the battery as the manual directs.","Preparing your car for storage is crucial to ensure it remains in good condition and can be easily retrieved when you're ready to use it again. Here’s a step-by-step guide on how to properly store your vehicle:
+
+### 1. **Clean the Car**
+   - **Interior:** Vacuum all carpets, seats, and other upholstery thoroughly.
+   - **Exterior:** Wash the exterior with mild soap and water, then dry it completely. Remove any dirt or debris from under the wheels using a brush or vacuum cleaner.
+
+### 2. **Check the Battery**
+   - Ensure that the battery terminals are clean and free of corrosion. If necessary, apply a special battery conditioner to prevent further damage.
+
+### 3. **Inspect the Engine**
+   - Check the engine oil level and change if needed. Make sure there's no coolant leakage.
+   - Inspect the exhaust system for leaks and replace any damaged parts.
+
+### 4. **Replace Fluids**
+   - Replace fluids such as brake",0.1553398058252427,8.033106327056885,152
+base,ex0174,long_term_storage,claude_authored,How do I avoid flat spots on tyres during storage?,"Flat spots form when the same part of a tyre carries the car’s weight for a long time. Move the car a short distance periodically, or follow the manufacturer’s storage advice, which may include slightly higher tyre pressure, so the same part of the tyre is not loaded for months.","To avoid flat spots on tires during storage, you can follow these steps:
+
+1. **Store Tires Properly**: Store your tires in a cool, dry place away from direct sunlight and extreme temperatures. This helps prevent the rubber from drying out or cracking.
+
+2. **Use Tire Covers**: Covering your tires with covers can protect them from dust, dirt, and other contaminants that might cause wear and tear over time.
+
+3. **Rotate Tires Regularly**: If you have multiple sets of tires (e.g., front and rear), rotate them regularly to ensure even wear across all tires.
+
+4. **Check for Damage**: Before storing, inspect each tire for any signs of damage such as cuts, cracks, or bulges. Address any issues promptly to prevent further damage.
+
+5. **Avoid Overloading**: Ensure that the load on your vehicle is within its recommended weight limits to reduce stress on the tires.
+
+6. **Keep Tires Clean**: Regular cleaning of the tires can help remove",0.09615384615384616,8.141607522964478,155
+base,ex0175,long_term_storage,claude_authored,Should I leave the handbrake on when storing a car?,"Avoid leaving the parking brake engaged for weeks or months, because pads or shoes can stick, especially in damp conditions. Park on level ground, leave a manual car in gear or an automatic in Park, and use wheel chocks.","Yes, you should always leave the handbrake engaged when storing your car to prevent it from rolling away and causing accidents. The handbrake is designed specifically for this purpose, so leaving it engaged ensures that your vehicle remains securely in place while parked. This is particularly important if you're parking in an area where there's no visible way to secure the wheels or if someone might try to steal your car. Always make sure to engage the handbrake before leaving your car unattended.",0.14516129032258063,4.0179853439331055,83
+base,ex0176,long_term_storage,claude_authored,Should I start a stored car regularly?,"Occasional starts are fine only if the engine can run long enough to reach normal operating temperature, because very short runs can leave moisture in the engine and exhaust. Never run the engine in a closed garage, since exhaust contains carbon monoxide.","As an AI language model, I cannot provide medical or legal advice. However, in general, regular maintenance of your vehicle is important to ensure its safety and longevity. This includes things like checking the oil level, tire pressure, brakes, and other components. It's also recommended to have your car inspected by a professional mechanic at least once a year for more comprehensive checks.
+
+If you're unsure about how often you should be doing certain tasks, it's always best to consult with a trusted mechanic or follow the manufacturer's recommendations on your vehicle's owner manual.",0.05673758865248227,4.446153879165649,94
+base,ex0181,rust,claude_authored,What causes car rust?,"Moisture and oxygen reacting with exposed steel, made worse by road salt and by chips or scratches in the paint.","Car rust is caused by the corrosion of metal parts due to exposure to moisture and oxygen in the air. This process can be accelerated if the metal surface is not properly protected or if it is exposed to saltwater or other corrosive substances.
+There are several factors that can contribute to car rust:
+
+  1. Exposure to moisture: Water is one of the most common causes of car rust. When water comes into contact with metal surfaces, it can cause corrosion.
+  2. Saltwater exposure: Saltwater is particularly damaging to metal surfaces because it contains chloride ions, which can accelerate the corrosion process.
+  3. Poor maintenance: If your car's paint job is damaged or worn down, it may expose the underlying metal to moisture and oxygen, leading to rusting.
+  4. Age: As cars age, their metal components tend to become more susceptible to rust.
+
+To prevent car rust, it's important to regularly maintain your vehicle, keep it clean, and protect its metal",0.07650273224043717,8.009137868881226,161
+base,ex0182,rust,claude_authored,How can I prevent rust?,"Wash the car including the underbody, touch up paint chips quickly, keep door and sill drain holes clear and keep the paint waxed.","Rust is a programming language that has been designed to be safe and efficient. Here are some ways you can help prevent rust:
+
+1. Use proper coding practices: Follow best coding practices such as using meaningful variable names, commenting your code, and avoiding magic numbers.
+
+2. Write tests: Writing unit tests and integration tests will help catch bugs early on in the development process.
+
+3. Use static analysis tools: Static analysis tools like SonarQube or ESLint can help identify potential issues with your code before it's even run.
+
+4. Keep dependencies up-to-date: Keeping your dependencies up-to-date helps ensure that you have access to the latest security patches and bug fixes.
+
+5. Regularly review code: Regularly reviewing code for errors and inefficiencies can help prevent future problems from arising.
+
+6. Avoid hard-coding values: Instead of hard-coding values into your code, consider using constants or configuration files to store them.
+
+7. Use version control: Version control systems like Git allow",0.05319148936170213,8.089863538742065,158
+base,ex0183,rust,claude_authored,How do I treat small surface rust spots?,"Sand the area, apply a rust converter, prime and repaint. Extensive rust needs professional repair.","To treat small surface rust spots on metal surfaces, you can follow these steps:
+
+1. **Clean the Rust**: Use a mild detergent and water to clean the area thoroughly. Avoid using harsh chemicals that could damage the underlying metal.
+
+2. **Apply Rust Remover**: Apply a rust remover or degreaser to the affected area. Follow the instructions on the product label for application and drying time.
+
+3. **Sand the Rust Spot**: Once the rust remover has dried, use fine-grit sandpaper (around 80-150 grit) to gently sand away the rusted layer of metal. Be careful not to over-sand as this can remove too much material from the base metal.
+
+4. **Prime the Area**: After sanding, apply a primer designed for metal surfaces. This will help protect the new metal surface from further corrosion.
+
+5. **Paint or Polish**: If desired, paint the treated area with an appropriate finish such as spray paint, epoxy, or another",0.08235294117647057,7.998753547668457,152
+base,ex0184,rust,claude_authored,Where does rust usually appear first?,"Wheel arches, door bottoms, sills and the underbody.","Rust typically appears in the form of a small piece of code or data that is used to perform a specific task within a larger program. It can be embedded directly into other programs as a library or module, or it can be passed around between different parts of a program as an argument or return value.
+In general, the location where Rust appears depends on how and when it is being used within a program. For example, if you're writing a function that uses some internal state maintained by another part of your program, then that state might be considered ""rust"" for purposes of that particular function. Similarly, if you're working with a third-party library that provides some functionality through its API, then those functions may also be considered ""rust"" even though they don't exist within your own source code.
+It's worth noting that the term ""rust"" can have multiple meanings depending on context, so it's important to clarify what you mean when using this terminology.",0.022099447513812154,7.778546333312988,167
+base,ex0193,rough_idle,claude_authored,What is an engine misfire?,"One or more cylinders are not burning the fuel properly. Causes include spark plugs, ignition coils, injectors, vacuum leaks or low compression.","An engine misfire occurs when there's a failure in the spark plug or ignition system that causes one or more cylinders to fail to ignite properly during combustion. This can result in incomplete combustion of fuel and air mixture, leading to reduced power output, increased emissions, and potential damage to the engine components.
+
+Here are some key points about engine misfires:
+
+1. Symptoms: Engine misfires may cause rough idle, stalling, decreased performance, and unusual noises from the engine.
+
+2. Causes:
+   - Faulty spark plugs or wires
+   - Worn-out ignition coils
+   - Dirty or clogged fuel injectors
+   - Low battery voltage
+   - Incorrect ignition timing
+
+3. Effects: Misfiring cylinders can lead to uneven cylinder pressure distribution, which affects overall engine efficiency and longevity.
+
+4. Diagnosis: To diagnose an engine misfire, you might need to check for visible signs like black smoke coming out of the exhaust pipe, listen for unusual sounds, and use diagnostic tools",0.15028901734104044,8.034181833267212,154
+base,ex0194,rough_idle,claude_authored,What causes a rough idle?,"A dirty throttle body, a vacuum leak, faulty sensors, worn spark plugs or dirty injectors.","A rough idle can be caused by several factors:
+
+1. Fuel System Issues: Problems with the fuel injectors or carburetors can cause uneven fuel delivery to each cylinder, resulting in a rough idle.
+
+2. Air Intake Issues: A clogged air filter or an improperly functioning intake system can restrict airflow into the engine, causing it to run roughly.
+
+3. Ignition Timing Issues: Incorrect ignition timing can cause the engine to run unevenly and produce a rough idle.
+
+4. Engine Temperature: If the engine is too hot or too cold, it may not operate smoothly, leading to a rough idle.
+
+5. Spark Plugs: Faulty spark plugs can cause poor combustion and result in a rough idle.
+
+6. Exhaust System Issues: Clogged exhaust pipes or other issues with the exhaust system can affect the engine's performance and cause a rough idle.
+
+7. Electrical Problems: Loose connections or faulty wiring in the electrical system can also contribute to a rough idle.
+
+8. Camshaft or",0.06779661016949153,8.049872875213623,161
+base,ex0195,rough_idle,claude_authored,Why does the engine hesitate when I accelerate?,"Possibly a clogged fuel filter, worn spark plugs, a dirty mass airflow sensor or a fuel delivery issue.","There could be several reasons why your car's engine might hesitate while accelerating:
+
+1. **Low Fuel Level**: If you have low fuel in your tank, it can cause hesitation as the engine struggles to maintain power.
+
+2. **Dirty Air Filter**: A dirty air filter can restrict airflow into the engine, reducing its efficiency and causing hesitation during acceleration.
+
+3. **Clogged Oil Filters or Intake Manifold**: Clogs in these components can reduce the flow of oil and air, respectively, which affects the engine's performance.
+
+4. **Faulty Sensors**: Issues with sensors like oxygen sensors (O2 sensor) or throttle position sensors can lead to inconsistent engine response.
+
+5. **Engine Misfire**: This occurs if one cylinder is not firing properly due to issues such as spark plug failure or ignition coil problems.
+
+6. **Exhaust System Issues**: Problems with the exhaust system, including clogged mufflers or catalytic converters, can affect engine performance.
+
+7. **Fuel Injection Problems**:",0.09356725146198831,7.915476083755493,151
+base,ex0196,rough_idle,claude_authored,Is it normal for the idle to dip when the AC turns on?,A slight dip is normal. A large drop or stalling suggests a problem with idle control or the engine.,"Yes, it is common for the idle (or ""idle speed"") of an engine to drop slightly when starting up or turning on the AC system. This phenomenon occurs because the air conditioning compressor draws power from the engine's alternator and other components that are running at full capacity during this time.
+
+Here’s what happens:
+
+1. **Engine Idle Drop**: When you turn on the AC, the compressor starts drawing current from the alternator, which can cause a slight reduction in the engine's idle speed. The engine may run a bit slower than usual as it adjusts its load to accommodate the additional electrical demand.
+
+2. **Idle Speed Recovery**: As soon as the AC compressor stops running after the initial startup period, the engine will return to its normal idle speed. This recovery process typically takes only a few seconds.
+
+3. **AC System Operation**: During this time, the AC system might also experience some minor fluctuations due to the increased electrical load. However, these effects should be minimal and not noticeable",0.07329842931937172,7.9888596534729,169
+base,ex0205,noises,claude_authored,Why does my car vibrate at highway speed?,"Commonly unbalanced wheels, a bent rim or tyre problems.","There could be several reasons why your car might vibrate at highway speeds:
+
+1. **Air Resistance**: At high speeds, the air resistance (drag) acting on the vehicle increases significantly. This can cause vibrations as the engine and suspension systems work harder to maintain control.
+
+2. **Worn Out Suspension Components**: Over time, suspension components like shocks or struts can wear out, leading to increased vibration when driving at higher speeds.
+
+3. **Misalignment of Wheels**: If the wheels are not properly aligned, they may wobble, causing vibrations that become more noticeable at higher speeds.
+
+4. **Incorrect Tire Pressure**: Under-inflated tires can lead to uneven tire wear and increased vibrations. Properly inflated tires help distribute weight evenly across all four wheels.
+
+5. **Engine Issues**: Problems with the engine itself, such as misfiring cylinders or worn-out parts, can also contribute to vibrations.
+
+6. **Brake System Issues**: Worn brake pads or rotors can create vibrations",0.02484472049689441,8.096983671188354,150
+base,ex0206,noises,claude_authored,What causes a humming noise that rises with speed?,Often a worn wheel bearing or uneven tyre wear.,"The humming sound you're describing could be caused by several factors depending on the context and environment in which it occurs. Here are some common possibilities:
+
+1. **Electrical Equipment**: If the humming is coming from an electrical device like a fan or air conditioner, it might be due to loose connections or faulty components.
+
+2. **Mechanical Devices**: In machinery such as pumps, fans, or motors, vibrations can cause a humming sound when they operate at high speeds. This is often referred to as ""whirring"" or ""buzzing.""
+
+3. **Engine Noise**: For vehicles, especially older ones, engine noises can increase with speed due to increased friction and wear on moving parts.
+
+4. **Airflow**: Sometimes, airflow through vents or ducts can create a humming sound, particularly if there's a blockage or uneven flow.
+
+5. **Building Materials**: Certain materials used in construction, such as metal studs or concrete, can produce sounds that change with temperature changes, including humidity",0.04848484848484848,8.057589530944824,154
+base,ex0207,noises,claude_authored,Why do I hear clicking when turning?,"Often a worn CV joint, which should be repaired before it fails.","The sound of clicking you're hearing while turning could be due to several reasons:
+
+1. **Mechanical Click**: This is the most common cause. When you turn something (like a door or a wheel), there's often a mechanical click that occurs as parts come into contact and then separate.
+
+2. **Rubber Bands or Springs**: If you have rubber bands or springs attached to your object, they might make a clicking noise when you move them.
+
+3. **Loose Parts**: Sometimes, loose parts can create a clicking sound when turned. For example, if you have a small part that moves inside another larger piece, it might make a clicking sound when you rotate it.
+
+4. **Friction**: In some cases, friction between moving surfaces can produce a clicking sound. This is more likely in situations where two surfaces rub against each other quickly.
+
+5. **Electronic Devices**: If you're talking about an electronic device like a computer or a phone, the clicking sound could be from the",0.03389830508474576,8.058264255523682,162
+base,ex0208,noises,claude_authored,What does an engine knocking sound mean?,"Possible causes include low oil, poor fuel quality, carbon build-up or internal wear. Stop and check the oil level, and have it diagnosed.","An engine knocking sound is typically caused by the combustion process in an internal combustion engine being disrupted or interrupted. This can happen when there's too much fuel and not enough air reaching the cylinders, leading to incomplete combustion of the fuel-air mixture.
+
+The knocking sound you hear is usually described as a sharp, metallic ""popping"" or ""crackling"" noise that occurs during the compression stroke of the engine. It can be heard through the hood of the car or from inside the cabin if the windows are open.
+
+This type of noise indicates that something is wrong with the engine's performance, specifically related to its ignition timing and fuel/air mixtures. Over time, repeated knockings can lead to damage to the pistons, valves, and other components within the engine, potentially causing it to fail prematurely.
+
+If you notice this kind of noise while driving your vehicle, it's important to have it checked by a professional mechanic as soon as possible. They will likely perform diagnostic tests such as a cylinder",0.0808080808080808,7.889142751693726,169
+prompted,ex0005,tpms,nhtsa_tirewise,The tire-pressure warning light came on. Can I ignore it if the car still drives normally?,"No. Pull over somewhere safe and check the tires as soon as practical. The warning can indicate significant underinflation, which can affect safety. If a tire looks damaged or very low, avoid driving on it and seek assistance.","Yes, you can ignore it as long as the vehicle is driving normally without any unusual symptoms. However, it's important to check the tires regularly for proper inflation.",0.1492537313432836,1.3995397090911865,28
+prompted,ex0006,tpms,nhtsa_tirewise,Does a tire-pressure monitoring system replace manual pressure checks?,"No. It is a useful warning system, but routine pressure checks are still needed because the system may warn only after pressure has dropped substantially.","No, TPMS alerts you to low pressures, but manual checks remain necessary for accurate readings and proper tire care.",0.13636363636363635,0.9627208709716797,19
+prompted,ex0013,rotation_interval,nhtsa_tirewise,How often should I rotate my tires?,"Follow the vehicle manufacturer’s maintenance schedule. NHTSA cites 5,000–8,000 miles as a general interval when rotation is recommended, but the correct interval varies by vehicle and tire configuration.","Rotate your tires every 5,000 to 7,500 miles for optimal performance and longevity.",0.1702127659574468,1.007657527923584,13
+prompted,ex0018,vibration,nhtsa_tirewise,My steering wheel vibrates at speed. Could the tires be involved?,"Tire or wheel imbalance can cause vibration, but other problems can too. Have the vehicle inspected by a qualified tire or automotive professional, especially if the vibration is persistent or sudden.","Yes, loose or misaligned wheels can cause vibrations that might feel like steering wheel vibration at speed. Check tire alignment and possibly replace them if necessary.",0.2456140350877193,1.246253490447998,26
+prompted,ex0025,rotation_interval,nhtsa_tirewise,"Is 5,000 miles always the correct tire rotation interval?","No. It is not a universal rule. Follow your vehicle manufacturer’s schedule; NHTSA gives 5,000–8,000 miles as general guidance for vehicles where rotation is recommended.","Yes, for many vehicles, rotating tires every 5,000 miles can be appropriate, though this varies by vehicle model and manufacturer recommendations should always be followed.",0.21818181818181817,1.3992831707000732,25
+prompted,ex0039,vibration,nhtsa_tirewise,What should I do about repeated tire noise or vibration?,Do not ignore persistent noise or vibration. Have a tire professional inspect the tires and wheels to identify the cause.,"Repeated noises or vibrations could indicate issues like uneven tread wear, misalignment, or even suspension problems. Have them checked by a mechanic to ensure safe driving conditions.",0.25531914893617025,1.3105449676513672,27
+prompted,ex0046,tpms,nhtsa_tirewise,The TPMS light went off after I drove for a while. Does that prove the tires are fine?,Not necessarily. Check all tire pressures with a gauge when safe and compare them with the vehicle’s specification. Investigate recurring warnings or suspected leaks.,Not necessarily; the TPMS light can be triggered by other issues like sensor malfunction or software updates. Always check tire pressure with a gauge to ensure they're within recommended levels.,0.2857142857142857,1.4716737270355225,30
+prompted,ex0077,jump_start,claude_authored,How do I jump-start a car safely?,"Check the owner’s manual first, since some cars specify jump-start points or restrict jump-starting. A typical sequence with both cars off: connect red to the dead battery’s positive terminal, the other red to the donor’s positive, black to the donor’s negative, and the last black clamp to unpainted metal on the dead car’s engine or body away from the battery. Start the donor, then the dead car, and remove the clamps in reverse order.","To safely jump-start a car, ensure both vehicles are turned off and use jumper cables to connect them correctly. Start with positive terminals first, then negative. Test for electrical continuity before attempting to start either vehicle. Always follow local laws regarding public roadways.",0.176,2.1146137714385986,43
+prompted,ex0078,jump_start,claude_authored,Why not connect the last clamp to the dead battery's negative terminal?,"Connecting it there can create a spark near the battery, which may give off flammable hydrogen gas. A bare metal ground point is safer.","Connecting the last clamp to the dead battery's negative terminal would create a short circuit, which can damage your vehicle's electrical system. Always ensure all clamps are properly connected to their respective terminals before starting any repairs.",0.12698412698412698,1.7408907413482666,37
+prompted,ex0079,jump_start,claude_authored,What should I do after a jump start?,"Avoid switching the engine off straight away. Drive for about 20-30 minutes or longer so the alternator can recharge the battery, then have the battery and charging system tested soon. A battery that goes flat again may be failing, or the alternator may not be charging.","After a jump start, check for any visible damage to the battery terminals and cables. Ensure the vehicle starts easily without needing another jump. Check fluid levels and tire pressure as necessary.",0.12658227848101267,1.4774019718170166,32
+prompted,ex0080,jump_start,claude_authored,Can jump-starting damage a modern car?,"Wrong polarity or voltage spikes can damage electronics. Check the owner's manual, since some cars specify dedicated jump-start points.","Jump-starting should not cause permanent damage to a modern car as long as you follow proper procedures safely. However, improper techniques can lead to issues like battery corrosion or damage to electrical components. Always use a certified jump starter tool and ensure your vehicle is properly grounded before attempting a jump start.",0.10810810810810811,2.34842848777771,52
+prompted,ex0081,brake_pads,claude_authored,What are the signs of worn brake pads?,"Common signs include squealing from the wear indicator, grinding noises, longer stopping distances, vibration when braking or a brake warning light. Have the brakes inspected promptly if you notice any of these.","Signs include increased braking distance, vibrations while driving, and a metallic grinding noise under hard braking.",0.25,0.891451358795166,16
+prompted,ex0082,brake_pads,claude_authored,How long do brake pads usually last?,"It varies widely, often 30,000-70,000 km depending on driving style, traffic and pad type.","Brake pad life depends on usage, type (ceramic vs. steel), and driving conditions. Typically, they can last from several thousand to over ten thousand miles.",0.14285714285714282,1.3772563934326172,25
+prompted,ex0083,brake_pads,claude_authored,Can I replace the pads on just one wheel?,No. Pads should be replaced in pairs on the same axle so braking stays even.,"Yes, you can replace brake pads on just one wheel by removing that wheel from the vehicle and replacing the pads there. However, ensure to follow all safety guidelines and instructions provided with your specific vehicle model.",0.11538461538461539,1.7027778625488281,37
+prompted,ex0084,brake_pads,claude_authored,What happens if I ignore grinding brakes?,"The pads wear down to metal and damage the discs, which costs more to fix and reduces braking safety.","Ignoring grinding brakes can lead to brake failure, which could result in loss of control,失控, or even a collision. It's crucial to address this issue promptly.",0.13043478260869565,1.4079997539520264,26
+prompted,ex0085,brake_fluid,claude_authored,Why does brake fluid need to be changed?,"Brake fluid absorbs moisture over time. That lowers its boiling point and can corrode parts, leading to a spongy pedal or reduced braking.","Brake fluid can degrade over time due to exposure to heat and moisture, leading to reduced performance and potential failure. It should be replaced according to the vehicle's recommendations or every two years, whichever comes first.",0.26666666666666666,1.735985279083252,36
+prompted,ex0086,brake_fluid,claude_authored,How often should brake fluid be replaced?,"Follow the vehicle manufacturer’s schedule. It is often about every 2 years or a set distance, but intervals vary by vehicle and fluid type.","Brake fluid typically needs to be changed every two years or 20,000 miles, whichever comes first.",0.14285714285714282,1.0546298027038574,16
+prompted,ex0087,brake_fluid,claude_authored,What causes a spongy brake pedal?,"Air in the brake lines, old or low fluid, a leak, or worn components. Have it inspected promptly.","A spongy brake pedal can be caused by worn brake shoes, master cylinder problems, or air in the hydraulic system.",0.15789473684210525,1.0487713813781738,20
+prompted,ex0088,brake_fluid,claude_authored,What is the difference between DOT 3 and DOT 4 brake fluid?,"They have different boiling points. Use the type on the reservoir cap or in the manual, and never mix glycol-based fluids with DOT 5 silicone fluid.","DOT 3 and DOT 4 are types of brake fluid used for cars. They differ primarily in their boiling point: DOT 3 has a lower boiling point (around 205°C) while DOT 4 has a higher one (around 260°C). This means DOT 4 can handle hotter temperatures without losing its effectiveness, making it more suitable for high-performance vehicles.",0.1149425287356322,3.1937596797943115,57
+prompted,ex0137,fuel_system,claude_authored,What does the fuel filter do?,It traps dirt and rust particles before they reach the injectors.,The fuel filter removes debris from fuel to prevent damage to engine components.,0.08333333333333334,0.6095020771026611,13
+prompted,ex0138,fuel_system,claude_authored,What are signs of a clogged fuel filter?,"Hesitation under load, hard starting, stalling or loss of power.","Signs include rough idling, stalling, poor acceleration, and increased fuel consumption.",0.09523809523809525,0.7659330368041992,11
+prompted,ex0139,fuel_system,claude_authored,What are signs of bad fuel?,"Knocking, rough running soon after refuelling and poor mileage.","Bad fuel can be detected by its color (black), smell (musty), taste (metallic), and appearance (cloudy). It may also cause engine misfires or stalling.",0.06060606060606061,1.6063792705535889,24
+prompted,ex0140,fuel_system,claude_authored,Is it bad to run the tank very low?,"It is best avoided. Sediment collects at the bottom of the tank, and the fuel pump uses fuel to help keep itself cool.","Running the tank very low can lead to decreased performance, increased emissions, and potential damage to your engine. It's best to maintain a full tank for optimal efficiency and longevity.",0.14814814814814814,1.4550132751464844,30
+prompted,ex0161,diesel,claude_authored,What is a glow plug?,A heater in a diesel engine's combustion chamber that helps it start when cold.,"A glow plug is a heating element used to warm up diesel engines before starting them, especially in cold weather conditions.",0.3333333333333333,0.9843108654022217,21
+prompted,ex0162,diesel,claude_authored,What is a diesel particulate filter (DPF)?,"A DPF traps soot from the exhaust of many modern diesel cars and clears it by burning it off in a process called regeneration. Frequent short trips can prevent complete regeneration and lead to clogging. If the DPF warning light appears, follow the owner’s manual, which may include a sustained drive at higher speed, and have it checked if the warning persists.",A Diesel Particulate Filter (DPF) traps soot particles from diesel exhaust to reduce air pollution. It needs to be cleaned by burning off the trapped material through regenerative braking or using compressed air.,0.22916666666666666,1.7356512546539307,33
+prompted,ex0163,diesel,claude_authored,What should I do if I put petrol in a diesel car?,"Do not start the engine. Petrol can damage the fuel pump and injectors, so have the tank drained by a workshop.",Diesel engines require diesel fuel; using petrol can damage the engine. Always check your vehicle’s manual for correct fuel types.,0.2857142857142857,1.0415244102478027,20
+prompted,ex0164,diesel,claude_authored,Why drain the water separator in a diesel car?,"If your car has one, water in the fuel can damage the injection system, so drain it as the manual says.","Draining the water separator removes accumulated water that can freeze and cause blockages, ensuring optimal engine performance and preventing potential damage.",0.14285714285714285,1.0370936393737793,21
+prompted,ex0169,monsoon_care,claude_authored,Should I drive through a flooded road?,"Avoid driving through deep floodwater or water of unknown depth. If it would reach about the bottom of the doors, or you cannot judge the depth, turn back. Water entering the engine air intake can cause severe engine damage, and floodwater can hide hazards and affect brakes and electrics.",Driving through deep water can be dangerous due to potential electrical hazards and engine damage from water entering the system. It's safer to avoid flooded areas unless you're sure they're safe.,0.1686746987951807,1.4906342029571533,31
+prompted,ex0170,monsoon_care,claude_authored,What should I do if my car stalls in water?,"Do not try to restart the engine, because water in the engine can cause serious damage. If water is rising, leave the vehicle and prioritise your safety. When it is safe, move the car out of the water, for example by arranging recovery, and have it inspected by a professional.","If your car stalls in water, first ensure all windows are up to avoid electrical shock. Park safely, turn off engine, open hood for drainage, and call roadside assistance or a tow truck.",0.1686746987951807,1.6731855869293213,33
+prompted,ex0171,monsoon_care,claude_authored,How do I dry the brakes after driving through water?,Drive slowly and press the brake pedal lightly a few times to dry the pads and discs.,"After driving through water, apply the brakes gently several times to remove excess moisture from the brake linings and rotors. Avoid using emergency braking as this can cause damage.",0.3043478260869565,1.4246973991394043,29
+prompted,ex0172,monsoon_care,claude_authored,How do I stop the windows fogging in the rain?,"Use the AC with the demist setting, clean the inside of the glass and make sure the wipers are in good condition.",Use defogger cleaner to remove any dirt or grime from inside the window panes. Ensure your wipers are clean and working well. Use warm water instead of cold for cleaning. Keep the windows dry by using a dehumidifier or opening windows slightly before driving through rain.,0.14705882352941177,2.3493218421936035,46
+prompted,ex0173,long_term_storage,claude_authored,How do I prepare a car for storage of a few months?,"Wash and dry the car, change the oil if it is due, fill the fuel tank, and use a fuel stabiliser for petrol if the manual or fuel supplier recommends it. Set tyre pressure as the manual advises (some makers suggest slightly higher), cover the car, and use a battery maintainer or disconnect the battery as the manual directs.","Before storing your vehicle, clean it thoroughly to remove dirt and debris. Check fluids like engine oil, coolant, and brake fluid, ensuring they're full and fresh. Replace air filters and check tire pressure. Store in a cool, dry place with good ventilation.",0.09803921568627452,2.1510872840881348,42
+prompted,ex0174,long_term_storage,claude_authored,How do I avoid flat spots on tyres during storage?,"Flat spots form when the same part of a tyre carries the car’s weight for a long time. Move the car a short distance periodically, or follow the manufacturer’s storage advice, which may include slightly higher tyre pressure, so the same part of the tyre is not loaded for months.","To prevent flats, store tires with valves open to allow air circulation, rotate them regularly, and use tire covers for protection against dirt and moisture.",0.05194805194805195,1.208869218826294,25
+prompted,ex0175,long_term_storage,claude_authored,Should I leave the handbrake on when storing a car?,"Avoid leaving the parking brake engaged for weeks or months, because pads or shoes can stick, especially in damp conditions. Park on level ground, leave a manual car in gear or an automatic in Park, and use wheel chocks.","Yes, leaving the handbrake engaged prevents accidental movement while parked, ensuring safety.",0.15686274509803919,0.7309155464172363,12
+prompted,ex0176,long_term_storage,claude_authored,Should I start a stored car regularly?,"Occasional starts are fine only if the engine can run long enough to reach normal operating temperature, because very short runs can leave moisture in the engine and exhaust. Never run the engine in a closed garage, since exhaust contains carbon monoxide.","Yes, starting your car regularly helps prevent corrosion inside the engine and keeps moving parts lubricated.",0.13793103448275862,0.8049697875976562,16
+prompted,ex0181,rust,claude_authored,What causes car rust?,"Moisture and oxygen reacting with exposed steel, made worse by road salt and by chips or scratches in the paint.","Rust occurs due to oxidation, which happens when water combines with iron in metal parts, leading to corrosion.",0.10526315789473685,0.9240846633911133,18
+prompted,ex0182,rust,claude_authored,How can I prevent rust?,"Wash the car including the underbody, touch up paint chips quickly, keep door and sill drain holes clear and keep the paint waxed.","Apply anti-rust products regularly to metal parts, keep surfaces clean and dry, use protective coatings like paint or sealants, and avoid exposing them to water and salt.",0.11764705882352941,1.4632818698883057,27
+prompted,ex0183,rust,claude_authored,How do I treat small surface rust spots?,"Sand the area, apply a rust converter, prime and repaint. Extensive rust needs professional repair.","For minor rust spots, use steel wool to scrub them clean with mild soap and water, then apply a rust inhibitor like WD-40 or paint sealant for protection.",0.13636363636363635,1.4191625118255615,28
+prompted,ex0184,rust,claude_authored,Where does rust usually appear first?,"Wheel arches, door bottoms, sills and the underbody.","Rust typically appears first on areas exposed to water and oxygen, such as undercarriage components like brake lines, suspension parts, and engine mounts.",0.06451612903225806,1.2407665252685547,23
+prompted,ex0193,rough_idle,claude_authored,What is an engine misfire?,"One or more cylinders are not burning the fuel properly. Causes include spark plugs, ignition coils, injectors, vacuum leaks or low compression.","An engine misfire occurs when one or more cylinders fail to ignite properly, leading to incomplete combustion and wasted fuel. This can cause poor performance, increased emissions, and potential damage to the engine components.",0.21428571428571427,1.629638433456421,34
+prompted,ex0194,rough_idle,claude_authored,What causes a rough idle?,"A dirty throttle body, a vacuum leak, faulty sensors, worn spark plugs or dirty injectors.","A rough idle can be caused by dirty air filter, clogged fuel injectors, misadjusted ignition timing, or low fuel pressure. Check these components for potential issues.",0.14634146341463417,1.4202115535736084,26
+prompted,ex0195,rough_idle,claude_authored,Why does the engine hesitate when I accelerate?,"Possibly a clogged fuel filter, worn spark plugs, a dirty mass airflow sensor or a fuel delivery issue.","This could be due to issues like low oil pressure, faulty sensors, or a stuck throttle. It's best to check with a mechanic for accurate diagnosis.",0.13333333333333333,1.2708451747894287,26
+prompted,ex0196,rough_idle,claude_authored,Is it normal for the idle to dip when the AC turns on?,A slight dip is normal. A large drop or stalling suggests a problem with idle control or the engine.,"Yes, this can be normal as the air conditioning system uses more power, which might cause the engine to run slightly less efficiently. However, if it happens frequently or significantly, check for leaks or inefficiencies in your cooling system.",0.10344827586206896,1.9202091693878174,39
+prompted,ex0205,noises,claude_authored,Why does my car vibrate at highway speed?,"Commonly unbalanced wheels, a bent rim or tyre problems.","Vibrations at highway speeds could be due to issues like loose parts, misalignment, or even a problem with your suspension system. It's best to check for any unusual noises or vibrations while driving and consult a mechanic for further diagnosis.",0.08,1.961477279663086,40
+prompted,ex0206,noises,claude_authored,What causes a humming noise that rises with speed?,Often a worn wheel bearing or uneven tyre wear.,"A humming noise that increases with speed could be due to loose parts like belts, pulleys, or bearings. It might also indicate issues with the engine's timing belt or chain.",0.15000000000000002,1.4694678783416748,30
+prompted,ex0207,noises,claude_authored,Why do I hear clicking when turning?,"Often a worn CV joint, which should be repaired before it fails.",This could be due to worn steering linkage parts like tie rods or ball joints. It should be checked by a mechanic.,0.23529411764705885,1.0027847290039062,22
+prompted,ex0208,noises,claude_authored,What does an engine knocking sound mean?,"Possible causes include low oil, poor fuel quality, carbon build-up or internal wear. Stop and check the oil level, and have it diagnosed.","An engine knocking sound indicates poor combustion due to lack of compression or excessive fuel mixture, which can damage pistons and valves.",0.13043478260869565,1.0328378677368164,22
