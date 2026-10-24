@@ -1,0 +1,13 @@
+# Python environment
+.venv/
+__pycache__/
+*.py[cod]
+
+# Secrets
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Generated evaluation outputs
+results/

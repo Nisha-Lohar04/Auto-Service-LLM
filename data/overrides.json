@@ -1,0 +1,106 @@
+{
+  "question:What does engine oil do?": {
+    "answer": "Engine oil lubricates moving parts, reduces friction and wear, helps carry heat away from the engine, and holds dirt and combustion by-products in suspension until the oil is drained.",
+    "review_status": "ok"
+  },
+  "question:Why does my car pull to one side when braking?": {
+    "answer": "Pulling to one side during braking can indicate a brake problem, such as a sticking caliper or uneven brake wear, although tire or alignment issues may also contribute. Have the vehicle inspected promptly. If braking or steering control is impaired, stop safely and arrange assistance.",
+    "review_status": "edited_by_reviewer"
+  },
+  "question:Why does my AC smell musty?": {
+    "answer": "A musty smell can result from moisture and microbial growth in the AC evaporator area or a dirty cabin filter. Check the filter and have the evaporator and condensate drain inspected if the smell persists. Use only vehicle-compatible cleaning products.",
+    "review_status": "edited_by_reviewer"
+  },
+  "question:What should I do if the red oil pressure light comes on?": {
+    "answer": "Safely stop the vehicle and switch off the engine immediately. Once parked safely, check the oil level according to the owner’s manual. Do not restart or continue driving until the cause of the warning has been assessed.",
+    "review_status": "edited_by_reviewer"
+  },
+  "question:Why is my steering heavy?": {
+    "answer": "Possible causes include low tire pressure, low power-steering fluid or pump problems in hydraulic systems, or a fault in electric power steering. If steering suddenly becomes unusually heavy, stop safely and arrange an inspection.",
+    "review_status": "edited_by_reviewer"
+  },
+  "question:What are symptoms of a clogged air filter?": {
+    "answer": "A clogged engine air filter can reduce power and fuel economy and cause sluggish acceleration or a rough idle, but these symptoms have other possible causes too. Inspect the filter and replace it according to the manufacturer’s schedule.",
+    "review_status": "edited_by_reviewer"
+  },
+  "question:Should shock absorbers be replaced in pairs?": {
+    "answer": "Replacing shock absorbers in pairs on the same axle is commonly recommended to help maintain balanced handling. Follow the vehicle manufacturer’s guidance and have the suspension inspected before deciding which components need replacement.",
+    "review_status": "edited_by_reviewer"
+  },
+  "question:What does black smoke mean?": {
+    "answer": "Black exhaust smoke can indicate excessive fuel or incomplete combustion. Possible causes include fuel-injection problems, restricted air intake or, on turbocharged engines, boost-system faults. The likely cause depends on the engine type; arrange diagnosis rather than replacing parts based on smoke colour alone.",
+    "review_status": "edited_by_reviewer"
+  },
+  "question:Is it safe to drive with a clicking CV joint?": {
+    "answer": "Repeated clicking while turning can indicate a worn outer CV joint. Have it inspected and repaired promptly. If the noise is severe or accompanied by vibration or loss of drive, stop safely and arrange professional assistance.",
+    "review_status": "edited_by_reviewer"
+  },
+  "question:What are signs of a weak car battery?": {
+    "answer": "Common signs include slow engine cranking, difficulty starting and dim lights. A battery warning light can indicate a charging-system fault rather than a failed battery alone. A battery and charging-system test can help identify the cause.",
+    "review_status": "edited_by_reviewer"
+  },
+  "question:Why should I keep service records?": {
+    "answer": "Service records document maintenance history and can help when discussing warranty coverage or selling the vehicle. Keep dated invoices and records of completed work; warranty coverage and resale value are not guaranteed by having records alone.",
+    "review_status": "edited_by_reviewer"
+  },
+  "question:When should I replace wiper blades?": {
+    "answer": "Replace wiper blades when they streak, skip, chatter, crack or fail to clear the windshield effectively. Replacement intervals vary with the blade, climate and use, so inspect them regularly and follow the manufacturer’s recommendations.",
+    "review_status": "edited_by_reviewer"
+  },
+  "question:How fast can I drive on a space-saver spare?": {
+    "answer": "Temporary spare tires have specific speed and distance restrictions. Check the spare tire’s label and the vehicle owner’s manual, follow the stated limits, and arrange repair or replacement of the damaged road tire promptly. Do not assume the same limit applies to every spare.",
+    "review_status": "edited_by_reviewer"
+  },
+  "question:How can I do a quick bounce test?": {
+    "answer": "Push down firmly on one corner and release; if the car keeps bouncing more than once or twice, the shock or damper may be worn. This is only a rough check, so also look for leaks, uneven tire wear or handling changes, and have the suspension inspected if you suspect a fault.",
+    "review_status": "edited_by_reviewer"
+  },
+  "question:What are signs of transmission problems?": {
+    "answer": "Possible warning signs include slipping, delayed or harsh gear changes, unusual noises, fluid leaks or a burning smell. Fluid colour alone does not establish a fault. Follow the owner’s manual and arrange diagnosis if symptoms appear.",
+    "review_status": "edited_by_reviewer"
+  },
+  "question:How do I jump-start a car safely?": {
+    "answer": "Check the owner’s manual first, since some cars specify jump-start points or restrict jump-starting. A typical sequence with both cars off: connect red to the dead battery’s positive terminal, the other red to the donor’s positive, black to the donor’s negative, and the last black clamp to unpainted metal on the dead car’s engine or body away from the battery. Start the donor, then the dead car, and remove the clamps in reverse order.",
+    "review_status": "edited_by_reviewer"
+  },
+  "question:What should I do after a jump start?": {
+    "answer": "Avoid switching the engine off straight away. Drive for about 20-30 minutes or longer so the alternator can recharge the battery, then have the battery and charging system tested soon. A battery that goes flat again may be failing, or the alternator may not be charging.",
+    "review_status": "edited_by_reviewer"
+  },
+  "question:What are the signs of worn brake pads?": {
+    "answer": "Common signs include squealing from the wear indicator, grinding noises, longer stopping distances, vibration when braking or a brake warning light. Have the brakes inspected promptly if you notice any of these.",
+    "review_status": "edited_by_reviewer"
+  },
+  "question:How often should brake fluid be replaced?": {
+    "answer": "Follow the vehicle manufacturer’s schedule. It is often about every 2 years or a set distance, but intervals vary by vehicle and fluid type.",
+    "review_status": "edited_by_reviewer"
+  },
+  "question:What is a diesel particulate filter (DPF)?": {
+    "answer": "A DPF traps soot from the exhaust of many modern diesel cars and clears it by burning it off in a process called regeneration. Frequent short trips can prevent complete regeneration and lead to clogging. If the DPF warning light appears, follow the owner’s manual, which may include a sustained drive at higher speed, and have it checked if the warning persists.",
+    "review_status": "edited_by_reviewer"
+  },
+  "question:Should I drive through a flooded road?": {
+    "answer": "Avoid driving through deep floodwater or water of unknown depth. If it would reach about the bottom of the doors, or you cannot judge the depth, turn back. Water entering the engine air intake can cause severe engine damage, and floodwater can hide hazards and affect brakes and electrics.",
+    "review_status": "edited_by_reviewer"
+  },
+  "question:What should I do if my car stalls in water?": {
+    "answer": "Do not try to restart the engine, because water in the engine can cause serious damage. If water is rising, leave the vehicle and prioritise your safety. When it is safe, move the car out of the water, for example by arranging recovery, and have it inspected by a professional.",
+    "review_status": "edited_by_reviewer"
+  },
+  "question:How do I prepare a car for storage of a few months?": {
+    "answer": "Wash and dry the car, change the oil if it is due, fill the fuel tank, and use a fuel stabiliser for petrol if the manual or fuel supplier recommends it. Set tyre pressure as the manual advises (some makers suggest slightly higher), cover the car, and use a battery maintainer or disconnect the battery as the manual directs.",
+    "review_status": "edited_by_reviewer"
+  },
+  "question:How do I avoid flat spots on tyres during storage?": {
+    "answer": "Flat spots form when the same part of a tyre carries the car’s weight for a long time. Move the car a short distance periodically, or follow the manufacturer’s storage advice, which may include slightly higher tyre pressure, so the same part of the tyre is not loaded for months.",
+    "review_status": "edited_by_reviewer"
+  },
+  "question:Should I leave the handbrake on when storing a car?": {
+    "answer": "Avoid leaving the parking brake engaged for weeks or months, because pads or shoes can stick, especially in damp conditions. Park on level ground, leave a manual car in gear or an automatic in Park, and use wheel chocks.",
+    "review_status": "edited_by_reviewer"
+  },
+  "question:Should I start a stored car regularly?": {
+    "answer": "Occasional starts are fine only if the engine can run long enough to reach normal operating temperature, because very short runs can leave moisture in the engine and exhaust. Never run the engine in a closed garage, since exhaust contains carbon monoxide.",
+    "review_status": "edited_by_reviewer"
+  }
+}
