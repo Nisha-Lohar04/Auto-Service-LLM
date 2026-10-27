@@ -18,3 +18,6 @@ Run the pipeline:
 
 ```powershell
 python src/build_dataset.py
+## Results
+See [RESULTS.md](RESULTS.md) for the base vs prompted vs fine-tuned comparison and its limitations.
+

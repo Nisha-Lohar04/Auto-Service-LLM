@@ -9,5 +9,7 @@ __pycache__/
 # Jupyter
 .ipynb_checkpoints/
 
-# Generated evaluation outputs
-results/
+
+*.zip
+qlora-adapter/
+qlora-out/
