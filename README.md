@@ -1,177 +1,215 @@
 
 # AutoService-LLM
 
-**Does fine-tuning a small open-source LLM improve automotive maintenance Q&A compared with prompting alone?**
+**Can fine-tuning a small language model improve automotive maintenance question answering beyond prompting alone?**
 
-AutoService-LLM is an end-to-end experiment that investigates this question through dataset construction, QLoRA fine-tuning, and comparative evaluation of three configurations of Qwen2.5-1.5B-Instruct.
+AutoService-LLM is an experimental project that investigates the effectiveness of parameter-efficient fine-tuning for automotive question answering. It compares three configurations of Qwen2.5-1.5B-Instruct: the base model, a few-shot prompted model, and a QLoRA fine-tuned model.
 
-The project compares a base model, a few-shot prompted model, and a fine-tuned model using ROUGE-L and blind human evaluation to examine whether improvements in generated answers translate into better correctness and safety.
+The experiment combines custom dataset construction, memory-efficient fine-tuning, automatic evaluation, and blind human assessment to examine whether improved text similarity translates into better answer correctness and safety.
 
-> **Project scope:** An experimental prototype for learning and evaluation. It is not a production system and should not replace a vehicle owner's manual or advice from a qualified mechanic.
 
 ## Key Findings
 
-- **ROUGE-L improved from 0.098 to 0.183** after fine-tuning.
+- **ROUGE-L increased from 0.098 to 0.183** after fine-tuning on 162 training examples.
 - **Human evaluation showed no improvement:** the fine-tuned model scored 22/40, compared with 26/40 for the base model.
-- **Answer style changed substantially:** outputs became shorter and more direct, which may have contributed to the higher ROUGE-L score.
-- **Retrieval-augmented generation (RAG)** is a promising next step for grounding automotive answers in trusted technical documentation.
+- **Fine-tuning changed response style:** answers became shorter and more direct, potentially contributing to higher lexical overlap with reference answers.
+- **Next direction:** Evaluate retrieval-augmented generation (RAG) using trusted automotive documentation to improve factual grounding.
 
-The central finding is that better automatic evaluation scores do not necessarily indicate better factual answers.
+**Key takeaway:** A higher automatic evaluation score does not necessarily mean an AI model produces more correct or safer answers.
 
 ## Experiment Overview
 
 | Component | Details |
 |---|---|
-| Task | Automotive service and maintenance question answering |
-| Base model | Qwen2.5-1.5B-Instruct |
-| Fine-tuning | 4-bit QLoRA |
+| Task | Automotive service and maintenance Q&A |
+| Model | Qwen2.5-1.5B-Instruct |
+| Configurations | Base, few-shot prompted, QLoRA fine-tuned |
+| Fine-tuning method | 4-bit QLoRA with NF4 quantization |
 | LoRA configuration | Rank 16, alpha 32 |
-| Training environment | Google Colab, free T4 GPU |
+| Training environment | Google Colab, T4 GPU |
 | Dataset | 233 Q&A examples across 66 topic groups |
 | Data split | 162 training / 24 validation / 47 test |
 | Evaluation | ROUGE-L and blind human scoring |
-| Frameworks | Transformers, PEFT, TRL, bitsandbytes |
+| Core frameworks | Transformers, PEFT, TRL, bitsandbytes |
 
-## What I Built
+## Project Workflow
 
-### 1. Dataset Construction and Validation
+1. **Dataset construction:** Combine automotive Q&A sources, remove duplicate questions, and apply persistent reviewer corrections.
+2. **Leakage-safe splitting:** Separate examples by topic group into training, validation, and test sets.
+3. **Baseline evaluation:** Compare the base model with a few-shot prompted model.
+4. **Parameter-efficient fine-tuning:** Train QLoRA adapters using a Google Colab T4 GPU.
+5. **Comparative evaluation:** Measure ROUGE-L and conduct blind human scoring.
+6. **Analysis:** Compare text similarity with human-assessed correctness and identify limitations.
 
-Implemented a reproducible dataset pipeline in `src/build_dataset.py` to combine automotive Q&A examples, apply reviewer corrections, and produce leakage-safe train, validation, and test splits.
+## Implementation Details
 
-- Combined NHTSA-sourced tire-related Q&A with LLM-drafted examples covering 46 other topics.
-- Removed duplicate questions and applied 26 reviewer corrections stored in `data/overrides.json`.
+### 1. Dataset Engineering
+
+Implemented a reproducible data pipeline in `src/build_dataset.py` to construct and validate the automotive Q&A dataset.
+
+**Dataset composition**
+
+- 49 Q&A examples based on NHTSA tire-safety guidance.
+- 184 LLM-drafted Q&A examples covering 46 other automotive topics.
+- 233 total examples organized into 66 topic groups.
+
+**Data quality and leakage prevention**
+
+- Removed duplicate questions.
+- Stored 26 reviewer corrections in `data/overrides.json`.
 - Applied corrections using exact question text so they persist across dataset rebuilds.
-- Split the dataset by topic group to prevent questions belonging to the same group from appearing across different splits.
-- Added assertions to verify group separation and validate the resulting dataset.
+- Split data by topic group to prevent the same group from appearing in multiple splits.
+- Added assertions to validate split sizes and detect group overlap.
 
-The pipeline produces 233 examples distributed across 66 topic groups, with 47 questions reserved for held-out evaluation.
+| Split | Examples | Purpose |
+|---|---:|---|
+| Training | 162 | Fine-tuning |
+| Validation | 24 | Monitoring training and model selection |
+| Test | 47 | Held-out evaluation |
+| **Total** | **233** | |
 
-### 2. Human Review of the Dataset
+### 2. Manual Dataset Review
 
-Reviewed the reference answers to improve dataset quality before evaluating the models.
+Reviewed reference answers to identify errors and improve the quality of the evaluation data.
 
 | Review activity | Examples reviewed | Corrections |
 |---|---:|---:|
+| Training sample | 50 | 16 |
 | Held-out test references | 47 | 11 |
-| Sample of training rows | 50 | 16 |
+| **Total reviewed** | **97** | **27 review events** |
 
-Corrections are maintained separately from the original data and reapplied during dataset construction, making the process reproducible.
+The project records 26 persistent corrections in `data/overrides.json`. The table counts correction events during review; a correction event is not necessarily a unique override entry.
 
-### 3. Baseline and Prompted Evaluation
+The original dataset and correction records are kept separate so corrections can be reapplied reproducibly.
 
-Implemented `notebooks/baseline_eval.ipynb` to compare the base model with a prompted configuration on the held-out test set.
+### 3. Baseline and Few-Shot Prompting
 
-The prompted model uses a system prompt and three examples to encourage concise, task-appropriate automotive maintenance answers without updating model weights.
+Implemented `notebooks/baseline_eval.ipynb` to evaluate the base and prompted configurations on the held-out test set.
+
+The prompted configuration uses a system prompt and three examples to guide the model toward concise, task-appropriate automotive answers without updating its weights.
+
+This establishes a comparison for determining whether fine-tuning offers an advantage over prompt engineering.
 
 ### 4. QLoRA Fine-Tuning
 
-Implemented `notebooks/finetune_qlora.ipynb` to fine-tune Qwen2.5-1.5B-Instruct using parameter-efficient training.
+Implemented `notebooks/finetune_qlora.ipynb` to adapt Qwen2.5-1.5B-Instruct using parameter-efficient fine-tuning.
 
-The training setup includes:
+**Training configuration**
 
-- 4-bit NF4 quantization.
-- LoRA adapters with rank 16 and alpha 32.
-- Hugging Face Transformers, PEFT, TRL, and bitsandbytes.
-- Training and validation loss tracking across epochs.
+| Parameter | Setting |
+|---|---|
+| Quantization | 4-bit NF4 |
+| Adaptation method | LoRA |
+| LoRA rank | 16 |
+| LoRA alpha | 32 |
+| Training epochs | 3 |
+| Learning rate | 2e-4 |
+| Hardware | Google Colab T4 GPU |
 
-The fine-tuning notebook saves the adapter and generated predictions. Adapter weights are not included in this repository.
+**Implementation stack**
+
+- Hugging Face Transformers
+- PEFT for LoRA adapters
+- TRL for supervised fine-tuning
+- bitsandbytes for quantization
+- Datasets for data handling
+
+Training and validation losses were monitored across epochs. Validation loss reached its best observed value at epoch 2 before increasing slightly at epoch 3, suggesting possible overfitting.
+
+The notebook saves the trained adapter and prediction files in its execution environment. Adapter weights are not included in the repository.
 
 ### 5. Blind Human Evaluation
 
-Designed a blind comparison to assess answer correctness and safety independently of the automatic metric.
+To assess answer quality beyond lexical similarity, 20 questions were sampled from the held-out test set.
 
-- Sampled 20 questions from the held-out test set.
-- Presented answers from all three model configurations in shuffled, unlabeled form.
-- Scored each answer on a three-level scale: 0, 1, or 2.
-- Evaluated whether answers were correct and safe, rather than rewarding concise wording alone.
+Answers from all three configurations were shuffled and presented without model labels. Each answer was scored for correctness and safety.
 
-**Scoring rubric**
-
-| Score | Interpretation |
+| Score | Definition |
 |---:|---|
 | 2 | Correct and safe |
 | 1 | Partly correct or vague |
 | 0 | Incorrect or unsafe |
 
-The evaluation was conducted by a single rater, who also authored the dataset. The results should therefore be interpreted as preliminary evidence rather than a definitive ranking.
+The evaluation was conducted by one rater who also authored the dataset. The findings are preliminary and do not establish statistical significance or general performance across automotive questions.
 
 ## Results
 
-### Automatic Evaluation
+### Automatic Evaluation: ROUGE-L
 
-All three configurations were evaluated on the same held-out test set of 47 questions.
+All configurations were evaluated on the same 47 held-out questions.
 
 | Model | ROUGE-L | Average answer length |
 |---|---:|---:|
 | Base | 0.098 | 147 words |
-| Prompted | 0.161 | 28 words |
-| Fine-tuned | 0.183 | 26 words |
+| Few-shot prompted | 0.161 | 28 words |
+| QLoRA fine-tuned | 0.183 | 26 words |
 
-Fine-tuning achieved the highest ROUGE-L score, an absolute increase of 0.085 over the base model.
+The fine-tuned model achieved the highest ROUGE-L score, an absolute increase of 0.085 over the base model.
 
-However, ROUGE-L measures lexical overlap with reference answers. It does not directly establish factual correctness, completeness, or safety.
+However, ROUGE-L measures lexical overlap with reference answers. It does not directly measure factual accuracy, completeness, or safety.
 
 ### Blind Human Evaluation
 
-Twenty test questions were scored, giving each model a maximum possible score of 40.
+The human evaluation covered 20 questions, with a maximum score of 40 per model.
 
 | Model | Total score | Average score | Score 2 | Score 1 | Score 0 |
 |---|---:|---:|---:|---:|---:|
 | Base | 26/40 | 1.30 | 10 | 6 | 4 |
-| Prompted | 22/40 | 1.10 | 7 | 8 | 5 |
-| Fine-tuned | 22/40 | 1.10 | 7 | 8 | 5 |
+| Few-shot prompted | 22/40 | 1.10 | 7 | 8 | 5 |
+| QLoRA fine-tuned | 22/40 | 1.10 | 7 | 8 | 5 |
 
 The fine-tuned model tied with the prompted model and scored below the base model in this sample.
 
-The four-point difference between the base and the other configurations is descriptive, not evidence of a statistically significant difference.
+The four-point difference between the base and the other models is descriptive. Given the small sample and single-rater setup, it should not be interpreted as a statistically significant difference.
 
-### Interpreting the Results
+### What the Results Suggest
 
-**1. Higher ROUGE-L did not translate into higher human scores.**
+**1. Text similarity and correctness are different objectives.**
 
-The fine-tuned model produced shorter answers that more closely matched the reference wording. Human scoring, however, did not show improved correctness or safety.
+Fine-tuning improved ROUGE-L, but human evaluation did not show a corresponding improvement in correctness.
 
-**2. Concision sometimes came at the expense of completeness.**
+**2. Concise answers can omit important information.**
 
-The base model's longer answers often covered more relevant points. The fine-tuned model was weaker on procedural questions involving jump-starting, vehicle storage, and brake care, where omitted steps can matter.
+The base model generated substantially longer responses. In the reviewed sample, the fine-tuned model was weaker on procedural questions involving jump-starting, vehicle storage, and brake care, where omitted steps can matter.
 
-**3. One safety-relevant answer improved.**
+**3. One safety-relevant response improved.**
 
-When asked whether a tire-pressure warning light could be ignored, the base and prompted models answered yes, whereas the fine-tuned model answered no and recommended inspection. This is a useful qualitative example, not evidence of an overall safety improvement.
+When asked whether a tire-pressure warning light could be ignored, the base and prompted models answered yes, while the fine-tuned model advised against ignoring it and recommended inspection. This is a qualitative observation, not evidence of an overall safety improvement.
 
-**4. The dataset may be too small to teach reliable new factual knowledge.**
+**4. More training is not automatically better.**
 
-With only 162 training examples, fine-tuning may have primarily influenced response style rather than establishing dependable automotive knowledge.
+With 162 training examples, the experiment did not demonstrate that fine-tuning provided more reliable automotive knowledge. It may have primarily influenced answer style.
 
-These findings motivate evaluating retrieval over trusted service documentation as an alternative or complement to fine-tuning.
+These findings motivate testing retrieval over trusted service documentation as an alternative or complement to fine-tuning.
 
 ## Limitations
 
-- **Small evaluation sample:** The test set contains 47 questions, and blind human evaluation covers only 20.
-- **Single evaluator:** No inter-rater agreement or independent assessment was available.
-- **Mixed data provenance:** Of the 233 examples, 184 were LLM-written from general knowledge and only partially verified. The remaining 49 tire-related examples were based on NHTSA guidance, which is US-specific.
-- **Metric limitations:** ROUGE-L measures text overlap and cannot independently verify factual correctness, procedural completeness, or safety.
-- **Limited domain coverage:** The dataset does not establish performance across vehicle makes, models, manufacturers, or service-manual specifications.
-- **Latency not reported:** Measurements were not comparable because base-model answers hit the token limit and the fine-tuned adapter was evaluated without merging its weights.
+- **Small dataset:** Only 233 examples were available, including 162 training examples.
+- **Limited evaluation:** The test set contains 47 questions, with blind human scoring covering 20.
+- **Single rater:** No independent evaluation or inter-rater agreement measurement was available.
+- **Partially verified data:** The 184 LLM-drafted examples were only partly verified. The 49 NHTSA-based tire examples rely on US-specific guidance.
+- **Metric limitations:** ROUGE-L does not establish factual correctness, procedural completeness, or safety.
+- **Limited generalizability:** Results do not establish performance across different vehicle manufacturers, models, or service manuals.
+- **Latency not reported:** Comparisons were not sufficiently consistent because base-model answers hit the token limit and the fine-tuned adapter was evaluated without merging its weights.
 
-The results should be interpreted as an exploratory comparison under a specific dataset, model, and evaluation setup.
+The results should be interpreted as an exploratory comparison under a specific experimental setup.
 
 ## Repository Structure
 
 ```text
 auto-service-llm/
 ├── data/
-│   ├── raw/                   # Source passages, catalog, initial Q&A
-│   ├── batches/               # LLM-drafted Q&A by topic
-│   ├── overrides.json         # Persistent reviewer corrections
-│   └── processed/             # Train, validation, and test JSONL
+│   ├── raw/                    # Source passages, catalog, initial Q&A
+│   ├── batches/                # LLM-drafted Q&A by topic
+│   ├── overrides.json          # Persistent reviewer corrections
+│   └── processed/              # Train, validation, test JSONL
 ├── notebooks/
-│   ├── baseline_eval.ipynb    # Base vs. prompted evaluation
+│   ├── baseline_eval.ipynb     # Base vs. prompted evaluation
 │   └── finetune_qlora.ipynb    # QLoRA fine-tuning and evaluation
-├── results/                   # Predictions, summaries, human scores
+├── results/                    # Predictions, summaries, human scores
 ├── src/
-│   └── build_dataset.py       # Dataset construction and validation
-├── RESULTS.md                 # Detailed experimental report
+│   └── build_dataset.py        # Dataset construction and validation
+├── RESULTS.md                  # Detailed experimental report
 └── README.md
 ```
 
@@ -188,15 +226,21 @@ Each example in `data/processed/*.jsonl` contains:
 
 ## Reproducing the Experiment
 
-### 1. Rebuild the Dataset
+### Prerequisites
 
-Requires Python 3.
+- Python 3
+- Google Colab account for GPU-based experiments
+- Access to a T4 GPU runtime for the documented training setup
+
+### Step 1: Rebuild the Dataset
+
+Run from the repository root:
 
 ```bash
 python src/build_dataset.py
 ```
 
-The script reports the dataset split sizes, applied overrides, and the result of the topic-group leakage checks.
+The script reports split sizes, the number of applied overrides, and the result of topic-group leakage checks.
 
 Expected split sizes:
 
@@ -207,45 +251,38 @@ Test:        47
 Total:      233
 ```
 
-### 2. Run Baseline Evaluation
+### Step 2: Run Baseline Evaluation
 
 1. Open `notebooks/baseline_eval.ipynb` in Google Colab.
 2. Select a T4 GPU runtime.
 3. Run the notebook cells to evaluate the base and prompted models.
 
-### 3. Run Fine-Tuning
+### Step 3: Run Fine-Tuning
 
 1. Open `notebooks/finetune_qlora.ipynb` in Google Colab.
 2. Select a T4 GPU runtime.
 3. Run the notebook cells to fine-tune the model and generate predictions.
 
-Both notebooks clone the repository to access the dataset. The fine-tuning notebook saves the trained adapter and prediction files in its execution environment.
+Both notebooks clone the repository to access the dataset. Fine-tuning outputs are saved in the notebook execution environment; trained adapter weights are not committed to this repository.
 
-For the complete experimental setup, evaluation details, and results, see [`RESULTS.md`](RESULTS.md).
+For the detailed experimental setup and results, see [`RESULTS.md`](RESULTS.md).
 
 ## Tech Stack
 
 - **Language:** Python
-- **Models:** Qwen2.5-1.5B-Instruct
+- **LLM:** Qwen2.5-1.5B-Instruct
 - **Fine-tuning:** QLoRA, LoRA, NF4 quantization
 - **ML frameworks:** Hugging Face Transformers, PEFT, TRL, Datasets
 - **Quantization:** bitsandbytes
-- **Evaluation and data processing:** rouge-score, pandas
-- **Environment:** Google Colab, T4 GPU
+- **Evaluation:** rouge-score
+- **Data processing:** pandas
+- **Compute:** Google Colab, NVIDIA T4 GPU
 
 ## Future Work
 
-1. **Retrieval-augmented generation:** Retrieve relevant passages from trusted automotive service manuals and compare grounded answers against the three existing configurations.
-2. **Improve procedural coverage:** Add verified examples covering multi-step maintenance and safety-critical procedures, then evaluate the effect of additional training.
-3. **Expand human evaluation:** Include a larger sample and a second independent rater to assess consistency.
-4. **Improve answer evaluation:** Add explicit checks for factual accuracy, required procedural steps, unsupported claims, and safety-critical omissions.
+1. **Build a RAG baseline:** Retrieve relevant passages from trusted automotive service manuals and compare grounded answers with all three existing configurations.
+2. **Improve procedural coverage:** Add verified examples for multi-step maintenance and safety-critical procedures.
+3. **Expand human evaluation:** Increase the sample size and include an independent second rater.
+4. **Strengthen evaluation:** Assess factual accuracy, required procedural steps, unsupported claims, and safety-critical omissions.
+5. **Revisit fine-tuning:** Evaluate whether more verified examples improve correctness after establishing a reliable retrieval baseline.
 
-## Author
-
-**Nisha Lohar**
-
-[GitHub Profile](https://github.com/Nisha-Lohar04)
-
----
-
-*AutoService-LLM is an educational research project. Always verify vehicle-specific procedures against the manufacturer's documentation and consult a qualified mechanic when appropriate.*
